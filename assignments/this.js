@@ -37,8 +37,22 @@ obj.doStuff('awesome');
 // Principle 3
 
 // code example for New Binding
+function newCashier(cashier) {
+    this.greeting = 'Hello';
+    this.cashier = cashier;
+    this.speak = function() {
+        console.log(this.greeting + this.cashier);
+        console.log(this);
+    };
+
+}
+const nyomi = new newCashier('Mack');
+const mack = new newCashier('Nyomi');
+nyomi.speak();
+mack.speak();
 
 
 // Principle 4
 
 // code example for Explicit Binding
+nyomi.speak.call(mack);mack.speak.apply(nyomi);
