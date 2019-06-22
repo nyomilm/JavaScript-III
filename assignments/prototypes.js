@@ -15,6 +15,7 @@
   * dimensions (These represent the character's size in the video game)
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
+function GameObject()
 
 /*
   === CharacterStats ===
